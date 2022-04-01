@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18693B1D27F7AC590075CA8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18693B1C27F7AC590075CA8F /* SceneDelegate.swift */; };
 		D339619425CE17E500A5B699 /* QuickCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339619325CE17E500A5B699 /* QuickCameraApp.swift */; };
 		D339619625CE17E500A5B699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339619525CE17E500A5B699 /* ContentView.swift */; };
 		D339619825CE17E800A5B699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D339619725CE17E800A5B699 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18693B1C27F7AC590075CA8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D339619025CE17E500A5B699 /* QuickCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D339619325CE17E500A5B699 /* QuickCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCameraApp.swift; sourceTree = "<group>"; };
 		D339619525CE17E500A5B699 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				D339619325CE17E500A5B699 /* QuickCameraApp.swift */,
 				D339619525CE17E500A5B699 /* ContentView.swift */,
 				D3D0B3BD25D2F46F00483811 /* CameraViewController.swift */,
+				18693B1C27F7AC590075CA8F /* SceneDelegate.swift */,
 				D3D0B3C025D2F55700483811 /* CameraView.swift */,
 				D339619725CE17E800A5B699 /* Assets.xcassets */,
 				D339619C25CE17E800A5B699 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18693B1D27F7AC590075CA8F /* SceneDelegate.swift in Sources */,
 				D339619625CE17E500A5B699 /* ContentView.swift in Sources */,
 				D339619425CE17E500A5B699 /* QuickCameraApp.swift in Sources */,
 				D3D0B3BE25D2F46F00483811 /* CameraViewController.swift in Sources */,
