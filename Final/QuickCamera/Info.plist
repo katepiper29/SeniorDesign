@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera needs to take video and photos for this tutorial.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The microphone needs to record audio for this tutorial.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs to save to the photo library for this tutorial</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -46,11 +52,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>The camera needs to take video and photos for this tutorial.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>The microphone needs to record audio for this tutorial.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs to save to the photo library for this tutorial</string>
 </dict>
 </plist>
