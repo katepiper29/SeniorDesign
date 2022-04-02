@@ -9,7 +9,14 @@ import SwiftUI
 
 struct Page2: View {
     var body: some View {
-        Text("Please Make Sure the Device is Horizontal!")
+        VStack {
+            Text("Please Make Sure the Device is Horizontal!")
+                .padding()
+            Button("I am Horizontal!") {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            }
+            .background(Color.yellow)
+        }
     }
 }
 

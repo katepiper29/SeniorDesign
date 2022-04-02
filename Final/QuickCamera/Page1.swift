@@ -9,16 +9,22 @@ import SwiftUI
 
 struct Page1: View {
     @State private var page2showing = false
+    
     var body: some View {
-        VStack{
-        Text("Welcome to the Game!")
-                .padding()
-    Button("Start") {
-        page2showing = true
-    }
-    .background(Color.yellow)
-    }
-        .sheet(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+        ZStack{
+            // place background here
+            Image("Bunnybackground")
+                .resizable()
+            VStack{
+                Text("Welcome to our Game!")
+                    .padding()
+                Button("Start") {
+                    page2showing = true
+                }
+            .background(Color.yellow)
+            }
+            .sheet(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+        }
     }
 }
 
