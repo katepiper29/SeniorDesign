@@ -41,6 +41,8 @@ class CameraViewController: UIViewController {
   var previewLayer: AVCaptureVideoPreviewLayer!
   var activeInput: AVCaptureDeviceInput!
   let movieOutput = AVCaptureMovieFileOutput()
+    
+
 
   var tempURL: URL? {
     let directory = NSTemporaryDirectory() as NSString
@@ -53,9 +55,16 @@ class CameraViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+      
+      // trying to get horizontal
+      //let value = UIInterfaceOrientation.landscapeRight.rawValue
+      //UIDevice.current.setValue(value, forKey: "orientation")
 
     setupSession()
     setupPreview()
+      // trying to get horizontal
+      //let value = UIInterfaceOrientation.landscapeRight.rawValue
+      //UIDevice.current.setValue(value, forKey: "orientation")
     startSession()
   }
 
@@ -86,6 +95,7 @@ class CameraViewController: UIViewController {
     }
     captureSession.addOutput(movieOutput)
     captureSession.commitConfiguration()
+      
   }
 
   func camera(for position: AVCaptureDevice.Position) -> AVCaptureDevice? {
@@ -118,6 +128,10 @@ class CameraViewController: UIViewController {
     previewLayer.frame = view.bounds
     previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     view.layer.addSublayer(previewLayer)
+      // trying to get horizontal
+      //let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        //  UIDevice.current.setValue(value, forKey: "orientation")
+      
   }
 
   func startSession() {
@@ -181,4 +195,5 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
       }
     }
   }
+    
 }

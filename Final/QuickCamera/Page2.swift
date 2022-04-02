@@ -11,15 +11,20 @@ struct Page2: View {
     @State private var page3showing = false
     
     var body: some View {
-        VStack {
-            Text("Please Make Sure the Device is Horizontal!")
-                .padding()
-            Button("I am Horizontal!") {
-                page3showing = true
+        ZStack{
+            // place background here
+            Image("Bunnybackground")
+                .resizable()
+            VStack {
+                Text("Please Make Sure the Device is Horizontal!")
+                    .padding()
+                Button("I am Horizontal!") {
+                    page3showing = true
+                }
+                .background(Color.yellow)
             }
-            .background(Color.yellow)
+            .sheet(isPresented: $page3showing, onDismiss: {}, content:{Page3()})
         }
-        .sheet(isPresented: $page3showing, onDismiss: {}, content:{Page3()})
     }
 }
 

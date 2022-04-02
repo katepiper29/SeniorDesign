@@ -31,12 +31,14 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import AVFoundation
 
 // checking push with a comment
 
 struct ContentView: View {
 
   @State var isRecording = false
+    @State private var Avatarshowing = false
   var cameraView = CameraView()
 
   var body: some View {
@@ -54,26 +56,44 @@ struct ContentView: View {
                 .foregroundColor(.white)
             }
           }
+         //   Button("Ready to Start") {
+          //      isRecording = true
+          //  }
           Spacer()
           HStack {
             Spacer()
-            Button {
-              if !isRecording {
-                cameraView.startRecording()
-              } else {
-                cameraView.stopRecording()
-              }
-              isRecording.toggle()
-            } label: {
-              Image(systemName: "record.circle")
-                .font(.system(size: 60))
-                .foregroundColor(isRecording ? Color.red : Color.white)
+            Button("Ready to Begin") {
+                print("Here")
+                Avatarshowing = true
+             // if !isRecording {
+               // cameraView.startRecording()
+                 // print("Here")
+                 // let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Avatar_with_Instructions", ofType: "mp4")!))
+                  
+              //    let layer = AVPlayerLayer(player: player)
+                //  layer.frame = view.bounds   //will need to change this to correct dimensions
+                //  layer.videoGravity = .resizeAspectFill
+               //   view.layer.addSublayer(layer)
+                  
+                //  player.play()
+            //  }
+           //    else {
+             //   cameraView.stopRecording()
+            //  }
+            //  isRecording.toggle()
+           // } label: {
+            //  Image(systemName: "record.circle")
+             //   .font(.system(size: 60))
+             //   .foregroundColor(isRecording ? Color.red : Color.white)
             }
             Spacer()
+            Spacer()
+            
           }
         }
       }
     }
+    .sheet(isPresented: $Avatarshowing, onDismiss: {}, content: {Avatar()})
   }
 }
 
