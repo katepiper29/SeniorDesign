@@ -16,5 +16,6 @@ struct ParentInstructions: View {
 struct ParentInstructions_Previews: PreviewProvider {
     static var previews: some View {
         ParentInstructions()
+        ParentInstructions().previewLayout(.fixed(width:568,height:320))
     }
 }

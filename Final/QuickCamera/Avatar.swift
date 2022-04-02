@@ -45,5 +45,6 @@ struct Avatar: View {
 struct Avatar_Previews: PreviewProvider {
     static var previews: some View {
         Avatar()
+        Avatar().previewLayout(.fixed(width:568,height:320))
     }
 }

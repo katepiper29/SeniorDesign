@@ -16,5 +16,6 @@ struct Finalpage: View {
 struct Finalpage_Previews: PreviewProvider {
     static var previews: some View {
         Finalpage()
+        Finalpage().previewLayout(.fixed(width:568,height:320))
     }
 }
