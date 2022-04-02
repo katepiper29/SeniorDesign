@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct Page2: View {
+    @State private var page3showing = false
+    
     var body: some View {
         VStack {
             Text("Please Make Sure the Device is Horizontal!")
                 .padding()
             Button("I am Horizontal!") {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                page3showing = true
             }
             .background(Color.yellow)
         }
+        .sheet(isPresented: $page3showing, onDismiss: {}, content:{Page3()})
     }
 }
 

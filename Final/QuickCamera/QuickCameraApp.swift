@@ -36,7 +36,8 @@ import SwiftUI
 struct QuickCameraApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //This is what determines where the app opens! Not scene delegate!
+            Page1()
         }
     }
 }
