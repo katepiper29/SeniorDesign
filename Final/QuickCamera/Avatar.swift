@@ -16,6 +16,7 @@ struct Avatar: View {
     private var videoURL: URL?
 
   @State var isRecording = false
+    @State private var finalpageshowing = false
 
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mov")
@@ -57,9 +58,10 @@ struct Avatar: View {
             .foregroundColor(isRecording ? Color.red : Color.white)
         }
         Button("Finish"){
-            
+            finalpageshowing = true
         }
       }
+    .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
     }
   }
 }
