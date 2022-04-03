@@ -46,17 +46,6 @@ struct ContentView: View {
         VStack {
             ZStack {
                 cameraView
-                VStack {
-                    HStack {
-                        Spacer()
-                        Button {
-                            cameraView.switchCamera()
-                        } label: {
-                            Image(systemName: "arrow.triangle.2.circlepath.camera")
-                                .padding()
-                                .foregroundColor(.white)
-                        }
-                    }
           Spacer()
           HStack {
             Spacer()
@@ -80,9 +69,8 @@ struct ContentView: View {
           .fullScreenCover(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
           }
         }
-      }
     }
-  }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

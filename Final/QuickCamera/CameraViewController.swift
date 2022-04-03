@@ -65,7 +65,8 @@ class CameraViewController: UIViewController {
 
   func setupSession() {
     captureSession.beginConfiguration()
-    guard let camera = AVCaptureDevice.default(for: .video) else {
+      //set default camera as front facing
+      guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) else {
       return
     }
     guard let mic = AVCaptureDevice.default(for: .audio) else {
@@ -87,14 +88,16 @@ class CameraViewController: UIViewController {
     captureSession.addOutput(movieOutput)
     captureSession.commitConfiguration()
   }
-
-  func camera(for position: AVCaptureDevice.Position) -> AVCaptureDevice? {
-    let discovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
-    let devices = discovery.devices.filter {
-      $0.position == position
+    
+    
+    func camera(for position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+      let discovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
+      let devices = discovery.devices.filter {
+        $0.position == position
+      }
+      return devices.first
     }
-    return devices.first
-  }
+     
 
   public func switchCamera() {
     let position: AVCaptureDevice.Position = (activeInput.device.position == .back) ? .front : .back
@@ -111,7 +114,7 @@ class CameraViewController: UIViewController {
     }
     captureSession.addInput(activeInput)
     captureSession.commitConfiguration()
-  }
+  } 
 
   func setupPreview() {
     previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)

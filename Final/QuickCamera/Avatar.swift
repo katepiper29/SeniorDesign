@@ -39,26 +39,30 @@ struct Avatar: View {
           else {
               Text("Video URL not available")
           }
-          VStack{
-              Button {
-                if !isRecording {
-                  cameraView.startRecording()
-                } else {
-                  cameraView.stopRecording()
-                }
-                isRecording.toggle()
-              }
-          label: {
-            Image(systemName: "record.circle")
-              .font(.system(size: 60))
-              .foregroundColor(isRecording ? Color.red : Color.white)
+          
+          VStack {
+    Spacer()
+    HStack {
+      Spacer()
+        Button {
+          if !isRecording {
+            cameraView.startRecording()
+          } else {
+            cameraView.stopRecording()
           }
-              Spacer()
-              Button("Finish"){
-              }
-          }
+          isRecording.toggle()
+        } label: {
+          Image(systemName: "record.circle")
+            .font(.system(size: 60))
+            .foregroundColor(isRecording ? Color.red : Color.white)
+        }
+        Button("Finish"){
+            
+        }
       }
+    }
   }
+}
 }
 
 struct Avatar_Previews: PreviewProvider {
