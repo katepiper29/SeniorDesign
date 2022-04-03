@@ -32,70 +32,57 @@
 
 import SwiftUI
 import AVFoundation
+import AVKit
 
-// checking push with a comment
 
 struct ContentView: View {
-
+    
   @State var isRecording = false
-    @State private var Avatarshowing = false
-  var cameraView = CameraView()
+    @State private var avatarshowing = false
+  
+    var cameraView = CameraView()
 
-  var body: some View {
-    VStack {
-      ZStack {
-        cameraView
+    var body: some View {
         VStack {
-          HStack {
-            Spacer()
-            Button {
-              cameraView.switchCamera()
-            } label: {
-              Image(systemName: "arrow.triangle.2.circlepath.camera")
-                .padding()
-                .foregroundColor(.white)
-            }
-          }
-         //   Button("Ready to Start") {
-          //      isRecording = true
-          //  }
+            ZStack {
+                cameraView
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button {
+                            cameraView.switchCamera()
+                        } label: {
+                            Image(systemName: "arrow.triangle.2.circlepath.camera")
+                                .padding()
+                                .foregroundColor(.white)
+                        }
+                    }
           Spacer()
           HStack {
             Spacer()
-            Button("Ready to Begin") {
-                print("Here")
-                Avatarshowing = true
-             // if !isRecording {
-               // cameraView.startRecording()
-                 // print("Here")
-                 // let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Avatar_with_Instructions", ofType: "mp4")!))
-                  
-              //    let layer = AVPlayerLayer(player: player)
-                //  layer.frame = view.bounds   //will need to change this to correct dimensions
-                //  layer.videoGravity = .resizeAspectFill
-               //   view.layer.addSublayer(layer)
-                  
-                //  player.play()
-            //  }
-           //    else {
-             //   cameraView.stopRecording()
-            //  }
-            //  isRecording.toggle()
-           // } label: {
-            //  Image(systemName: "record.circle")
-             //   .font(.system(size: 60))
-             //   .foregroundColor(isRecording ? Color.red : Color.white)
+              Button {
+                if !isRecording {
+                  cameraView.startRecording()
+                } else {
+                  cameraView.stopRecording()
+                }
+                isRecording.toggle()
+              } label: {
+                Image(systemName: "record.circle")
+                  .font(.system(size: 60))
+                  .foregroundColor(isRecording ? Color.red : Color.white)
+              }
+              Button("Show Video"){
+                  avatarshowing = true
+              }
+              Spacer()
             }
-            Spacer()
-            Spacer()
-            
+          .sheet(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
           }
         }
       }
     }
-    .sheet(isPresented: $Avatarshowing, onDismiss: {}, content: {Avatar()})
   }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

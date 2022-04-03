@@ -1,15 +1,15 @@
 ///// Copyright (c) 2020 Razeware LLC
-/// 
+///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-/// 
+///
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-/// 
+///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-/// 
+///
 /// This project and source code may use libraries or frameworks that are
 /// released under various Open-Source licenses. Use of those libraries and
 /// frameworks are governed by their own individual licenses.
@@ -41,8 +41,6 @@ class CameraViewController: UIViewController {
   var previewLayer: AVCaptureVideoPreviewLayer!
   var activeInput: AVCaptureDeviceInput!
   let movieOutput = AVCaptureMovieFileOutput()
-    
-
 
   var tempURL: URL? {
     let directory = NSTemporaryDirectory() as NSString
@@ -55,16 +53,9 @@ class CameraViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-      
-      // trying to get horizontal
-      //let value = UIInterfaceOrientation.landscapeRight.rawValue
-      //UIDevice.current.setValue(value, forKey: "orientation")
 
     setupSession()
     setupPreview()
-      // trying to get horizontal
-      //let value = UIInterfaceOrientation.landscapeRight.rawValue
-      //UIDevice.current.setValue(value, forKey: "orientation")
     startSession()
   }
 
@@ -95,7 +86,6 @@ class CameraViewController: UIViewController {
     }
     captureSession.addOutput(movieOutput)
     captureSession.commitConfiguration()
-      
   }
 
   func camera(for position: AVCaptureDevice.Position) -> AVCaptureDevice? {
@@ -128,10 +118,6 @@ class CameraViewController: UIViewController {
     previewLayer.frame = view.bounds
     previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     view.layer.addSublayer(previewLayer)
-      // trying to get horizontal
-      //let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        //  UIDevice.current.setValue(value, forKey: "orientation")
-      
   }
 
   func startSession() {
@@ -195,5 +181,4 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
       }
     }
   }
-    
 }

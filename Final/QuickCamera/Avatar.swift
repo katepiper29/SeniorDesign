@@ -16,7 +16,6 @@ struct Avatar: View {
     private var videoURL: URL?
 
   @State var isRecording = false
-    @State private var Finalpageshowing = false
 
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mov")
@@ -26,8 +25,9 @@ struct Avatar: View {
   var cameraView = CameraView()
 
   var body: some View {
-      Text("Hello")
       
+      ZStack{
+     cameraView
       if let url = videoURL {
           if #available(iOS 14.0, *) {
               VideoPlayer(player: AVPlayer(url: url))
@@ -39,9 +39,28 @@ struct Avatar: View {
           else {
               Text("Video URL not available")
           }
+          VStack{
+              Button {
+                if !isRecording {
+                  cameraView.startRecording()
+                } else {
+                  cameraView.stopRecording()
+                }
+                isRecording.toggle()
+              }
+          label: {
+            Image(systemName: "record.circle")
+              .font(.system(size: 60))
+              .foregroundColor(isRecording ? Color.red : Color.white)
+          }
+              Spacer()
+              Button("Finish"){
+              }
+          }
       }
-   // .sheet(isPresented: $Finalpageshowing, onDismiss: {}, content: {Finalpage()})
+  }
 }
+
 struct Avatar_Previews: PreviewProvider {
     static var previews: some View {
         Avatar()
