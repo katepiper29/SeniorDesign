@@ -23,6 +23,9 @@ struct Page1: View {
                     page2showing = true
                 }
                 .background(Color.yellow)
+                .padding()
+                Button("Parent Help Page") {
+                }
             }
             .fullScreenCover(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
         }

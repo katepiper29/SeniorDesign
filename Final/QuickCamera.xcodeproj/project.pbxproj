@@ -10,11 +10,11 @@
 		04466EDE27F8F4D500152379 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EDD27F8F4D500152379 /* Avatar.swift */; };
 		04466EE027F8F50700152379 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EDF27F8F50700152379 /* VideoPlayerController.swift */; };
 		04466EE227F8F52B00152379 /* Finalpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EE127F8F52B00152379 /* Finalpage.swift */; };
-		04466EED27F8FD2C00152379 /* Avatar.mov in Resources */ = {isa = PBXBuildFile; fileRef = 04466EEC27F8FD2C00152379 /* Avatar.mov */; };
 		0495B56927F7B34E00E302F4 /* Page1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495B56827F7B34E00E302F4 /* Page1.swift */; };
 		0495B56B27F7B7E000E302F4 /* Page2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495B56A27F7B7E000E302F4 /* Page2.swift */; };
 		04BC2C8C27FA208900F767B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC2C8B27FA208900F767B9 /* SceneDelegate.swift */; };
 		18693B5827F7EE5D0075CA8F /* Page3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18693B5627F7ED960075CA8F /* Page3.swift */; };
+		189E7D2F27FA3A5A0084B24C /* Avatar.mov in Resources */ = {isa = PBXBuildFile; fileRef = 189E7D2E27FA3A5A0084B24C /* Avatar.mov */; };
 		18CC255827F7F53900F16B5D /* Page4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC255727F7F53900F16B5D /* Page4.swift */; };
 		18CC255A27F7F57000F16B5D /* ParentInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC255927F7F57000F16B5D /* ParentInstructions.swift */; };
 		D339619425CE17E500A5B699 /* QuickCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339619325CE17E500A5B699 /* QuickCameraApp.swift */; };
@@ -29,11 +29,11 @@
 		04466EDD27F8F4D500152379 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		04466EDF27F8F50700152379 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		04466EE127F8F52B00152379 /* Finalpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finalpage.swift; sourceTree = "<group>"; };
-		04466EEC27F8FD2C00152379 /* Avatar.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Avatar.mov; path = ../../../../Documents/Avatar.mov; sourceTree = "<group>"; };
 		0495B56827F7B34E00E302F4 /* Page1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1.swift; sourceTree = "<group>"; };
 		0495B56A27F7B7E000E302F4 /* Page2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2.swift; sourceTree = "<group>"; };
 		04BC2C8B27FA208900F767B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18693B5627F7ED960075CA8F /* Page3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3.swift; sourceTree = "<group>"; };
+		189E7D2E27FA3A5A0084B24C /* Avatar.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Avatar.mov; path = ../../../../Desktop/Avatar.mov; sourceTree = "<group>"; };
 		18CC255727F7F53900F16B5D /* Page4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4.swift; sourceTree = "<group>"; };
 		18CC255927F7F57000F16B5D /* ParentInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInstructions.swift; sourceTree = "<group>"; };
 		D339619025CE17E500A5B699 /* QuickCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +86,7 @@
 				18CC255727F7F53900F16B5D /* Page4.swift */,
 				D339619525CE17E500A5B699 /* ContentView.swift */,
 				04466EDD27F8F4D500152379 /* Avatar.swift */,
-				04466EEC27F8FD2C00152379 /* Avatar.mov */,
+				189E7D2E27FA3A5A0084B24C /* Avatar.mov */,
 				04466EDF27F8F50700152379 /* VideoPlayerController.swift */,
 				04466EE127F8F52B00152379 /* Finalpage.swift */,
 				18CC255927F7F57000F16B5D /* ParentInstructions.swift */,
@@ -163,8 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D339619B25CE17E800A5B699 /* Preview Assets.xcassets in Resources */,
+				189E7D2F27FA3A5A0084B24C /* Avatar.mov in Resources */,
 				D339619825CE17E800A5B699 /* Assets.xcassets in Resources */,
-				04466EED27F8FD2C00152379 /* Avatar.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,15 +317,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickCamera/Preview Content\"";
-				DEVELOPMENT_TEAM = P87Q5M2V8Z;
+				DEVELOPMENT_TEAM = NDVKA2PBV3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickCamera/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SeniorDesignApp.QuickCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeniorDesign.QuickCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,15 +339,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickCamera/Preview Content\"";
-				DEVELOPMENT_TEAM = P87Q5M2V8Z;
+				DEVELOPMENT_TEAM = NDVKA2PBV3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickCamera/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SeniorDesignApp.QuickCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeniorDesign.QuickCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
