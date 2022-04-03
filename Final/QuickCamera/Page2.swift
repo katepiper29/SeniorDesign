@@ -23,7 +23,8 @@ struct Page2: View {
                 }
                 .background(Color.yellow)
             }
-            .sheet(isPresented: $page3showing, onDismiss: {}, content:{Page3()})
+            .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content:{Page3()})
+
         }
     }
 }

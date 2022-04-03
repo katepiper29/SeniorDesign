@@ -19,11 +19,12 @@ struct Page1: View {
                 Text("Welcome to our Game!")
                     .padding()
                 Button("Start") {
+ 
                     page2showing = true
                 }
-            .background(Color.yellow)
+                .background(Color.yellow)
             }
-            .sheet(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+            .fullScreenCover(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
         }
     }
 }

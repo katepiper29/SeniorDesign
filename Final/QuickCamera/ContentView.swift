@@ -77,7 +77,7 @@ struct ContentView: View {
               }
               Spacer()
             }
-          .sheet(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
+          .fullScreenCover(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
           }
         }
       }

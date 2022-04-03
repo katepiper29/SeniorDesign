@@ -21,7 +21,7 @@ struct Page4: View {
             }
             .background(Color.yellow)
         }
-        .sheet(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
+        .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
     }
 }
 
