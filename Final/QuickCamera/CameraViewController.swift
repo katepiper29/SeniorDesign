@@ -53,10 +53,11 @@ class CameraViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+      
     setupSession()
     setupPreview()
     startSession()
+      
   }
 
   override func viewWillDisappear(_ animated: Bool) {

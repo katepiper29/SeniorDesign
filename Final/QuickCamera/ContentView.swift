@@ -33,14 +33,17 @@
 import SwiftUI
 import AVFoundation
 import AVKit
+import UIKit
 
 
 struct ContentView: View {
     
   @State var isRecording = false
     @State private var avatarshowing = false
+    @State var orientation:UIDeviceOrientation = UIDevice.current.orientation
   
     var cameraView = CameraView()
+    
 
     var body: some View {
         VStack {
@@ -68,8 +71,17 @@ struct ContentView: View {
             }
           .fullScreenCover(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
           }
+            .onAppear {
+            print("Here")
+                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation") // Forcing the rotation to portrait
+            AppDelegate.orientationLock = .portrait // And making sure it stays that way
+            }.onDisappear {
+                        AppDelegate.orientationLock = .all
         }
+        
     }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -78,3 +90,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().previewLayout(.fixed(width:568,height:320))
     }
 }
+

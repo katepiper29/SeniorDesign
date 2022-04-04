@@ -13,15 +13,19 @@ struct Page4: View {
     @State private var camerashowing = false
     
     var body: some View {
-        VStack{
-        Text("Please make sure your whole body is visible")
-                .padding()
-            Button("Check Camera!"){
-                camerashowing = true
+        ZStack{
+            Image("Bunnybackground")
+                .resizable()
+            VStack{
+            Text("Please make sure your whole body is visible")
+                    .padding()
+                Button("Check Camera!"){
+                    camerashowing = true
+                }
+                .background(Color.yellow)
             }
-            .background(Color.yellow)
+            .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
         }
-        .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
     }
 }
 

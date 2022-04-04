@@ -11,15 +11,19 @@ struct Page3: View {
     @State private var page4showing = false
     
     var body: some View {
-        VStack{
-        Text("Please place a piece of tape on the ground as shown")
-                .padding()
-            Button("Next!"){
-                page4showing = true
+        ZStack{
+            Image("Bunnybackground")
+                .resizable()
+            VStack{
+                Text("Please place a piece of tape on the ground as shown")
+                    .padding()
+                Button("Next!"){
+                    page4showing = true
+                }
+                .background(Color.yellow)
             }
-            .background(Color.yellow)
+            .fullScreenCover(isPresented: $page4showing, onDismiss: {}, content: {Page4()})
         }
-        .fullScreenCover(isPresented: $page4showing, onDismiss: {}, content: {Page4()})
     }
 }
 

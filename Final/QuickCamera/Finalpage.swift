@@ -9,7 +9,15 @@ import SwiftUI
 
 struct Finalpage: View {
     var body: some View {
-        Text("All Done!")
+        ZStack{
+            Image("Bunnycongrats")
+                .resizable()
+            VStack{
+                Text("Congratulations!")
+                    .fontWeight(.heavy)
+            
+            }
+        }
     }
 }
 

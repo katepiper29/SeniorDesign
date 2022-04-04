@@ -8,8 +8,41 @@
 import SwiftUI
 
 struct ParentInstructions: View {
+    @State private var page2showing = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            // place background here
+            Image("Bunnybackground")
+                .resizable()
+            VStack{
+                Text("Welcome Parents/Guardians")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .padding()
+                Text("Thank you so much for agreeing to participate in the remote motor development study")
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Text("During this test, your child will be participating in a game where they will dance along with the movement performed by a bunny")
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Text("Please")
+                    .padding()
+                Text("Help them with the setup")
+                    .padding()
+                Text("And then")
+                    .padding()
+                Text("Let them do the movements ON THEIR OWN")
+                    .padding()
+                Text("Thank you so much for your participation")
+                    .padding()
+                Button("Click Here when you are ready to play!")
+                    {
+                    page2showing = true
+                }
+                .fullScreenCover(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+                
+            }
+        }
     }
 }
 

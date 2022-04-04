@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Page1: View {
     @State private var page2showing = false
+    @State private var ParentInstructionsshowing = false
     
     var body: some View {
         ZStack{
@@ -25,9 +26,13 @@ struct Page1: View {
                 .background(Color.yellow)
                 .padding()
                 Button("Parent Help Page") {
+                    ParentInstructionsshowing = true
                 }
             }
             .fullScreenCover(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+                             
+            .fullScreenCover(isPresented: $ParentInstructionsshowing, onDismiss: {}, content: {ParentInstructions()})
+            
         }
     }
 }
