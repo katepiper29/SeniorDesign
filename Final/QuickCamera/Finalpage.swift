@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Finalpage: View {
+    @State private var page1showing = false
     var body: some View {
         ZStack{
             Image("Bunnycongrats")
@@ -15,8 +16,13 @@ struct Finalpage: View {
             VStack{
                 Text("Congratulations!")
                     .fontWeight(.heavy)
+                    .padding()
+                Button("Return to Home") {
+                    page1showing = true
+                }
             
             }
+            .fullScreenCover(isPresented: $page1showing, onDismiss: {}, content: {Page1()})
         }
     }
 }
