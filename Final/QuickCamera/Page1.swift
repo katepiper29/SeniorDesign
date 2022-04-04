@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Page1: View {
-    @State private var page2showing = false
+    @State private var page3showing = false
     @State private var ParentInstructionsshowing = false
     
     var body: some View {
@@ -18,18 +18,29 @@ struct Page1: View {
                 .resizable()
             VStack{
                 Text("Welcome to our Game!")
-                    .padding()
-                Button("Start") {
+                    .font(.system(size: 60))
+                    .padding(40)
+                Button("Start"){
  
-                    page2showing = true
+                    page3showing = true
                 }
-                .background(Color.yellow)
+                .font(.system(size: 40))
                 .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                
+                .padding(40)
                 Button("Parent Help Page") {
                     ParentInstructionsshowing = true
                 }
+                .font(.system(size: 30))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
             }
-            .fullScreenCover(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+            .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})
                              
             .fullScreenCover(isPresented: $ParentInstructionsshowing, onDismiss: {}, content: {ParentInstructions()})
             

@@ -17,11 +17,17 @@ struct Page2: View {
                 .resizable()
             VStack {
                 Text("Please Make Sure the Device is Horizontal!")
-                    .padding()
+                    .font(.system(size: 60))
+                    .multilineTextAlignment(.center)
+                    .padding(40)
                 Button("I am Horizontal!") {
                     page3showing = true
                 }
+                .font(.system(size: 40))
+                .padding()
                 .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
             }
             .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content:{Page3()})
 

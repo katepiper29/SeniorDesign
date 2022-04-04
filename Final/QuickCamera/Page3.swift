@@ -16,11 +16,17 @@ struct Page3: View {
                 .resizable()
             VStack{
                 Text("Please place a piece of tape on the ground as shown")
-                    .padding()
+                    .font(.system(size: 60))
+                    .multilineTextAlignment(.center)
+                    .padding(40)
                 Button("Next!"){
                     page4showing = true
                 }
+                .font(.system(size: 40))
+                .padding()
                 .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
             }
             .fullScreenCover(isPresented: $page4showing, onDismiss: {}, content: {Page4()})
         }
