@@ -14,7 +14,7 @@ struct Page4: View {
     
     var body: some View {
         ZStack{
-            Image("Bunnybackground")
+            Image("BunnyVertical")
                 .resizable()
             VStack{
             Text("Please make sure your whole body is visible")

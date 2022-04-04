@@ -11,7 +11,7 @@ struct Finalpage: View {
     @State private var page1showing = false
     var body: some View {
         ZStack{
-            Image("Bunnycongrats")
+            Image("BunnyVertical")
                 .resizable()
             VStack{
                 Text("Congratulations!")

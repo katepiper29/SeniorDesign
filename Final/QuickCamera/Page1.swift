@@ -14,7 +14,7 @@ struct Page1: View {
     var body: some View {
         ZStack{
             // place background here
-            Image("Bunnybackground")
+            Image("BunnyVertical")
                 .resizable()
             VStack{
                 Text("Welcome to our Game!")

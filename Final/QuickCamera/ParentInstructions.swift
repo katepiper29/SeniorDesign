@@ -12,7 +12,7 @@ struct ParentInstructions: View {
     var body: some View {
         ZStack{
             // place background here
-            Image("Bunnybackground")
+            Image("BunnyVertical")
                 .resizable()
             VStack{
                 Text("Welcome Parents/Guardians")

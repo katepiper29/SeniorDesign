@@ -13,7 +13,7 @@ struct Page2: View {
     var body: some View {
         ZStack{
             // place background here
-            Image("Bunnybackground")
+            Image("BunnyVertical")
                 .resizable()
             VStack {
                 Text("Please Make Sure the Device is Horizontal!")

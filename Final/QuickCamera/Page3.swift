@@ -12,7 +12,7 @@ struct Page3: View {
     
     var body: some View {
         ZStack{
-            Image("Bunnybackground")
+            Image("BunnyVertical")
                 .resizable()
             VStack{
                 Text("Please place a piece of tape on the ground as shown")
