@@ -17,6 +17,7 @@ struct Avatar: View {
 
   @State var isRecording = false
     @State private var finalpageshowing = false
+    @State private var popupshowing = true
 
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mov")
@@ -26,7 +27,6 @@ struct Avatar: View {
   var cameraView = CameraView()
 
   var body: some View {
-      
       ZStack{
      cameraView
       if let url = videoURL {
@@ -67,6 +67,7 @@ struct Avatar: View {
         .foregroundColor(.white)
       }
     .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
+    .sheet(isPresented:$popupshowing,onDismiss:{},content:{PopUp()})
     }
   }
 }

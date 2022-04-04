@@ -40,6 +40,7 @@ struct ContentView: View {
     
   @State var isRecording = false
     @State private var avatarshowing = false
+
     @State var orientation:UIDeviceOrientation = UIDevice.current.orientation
   
     var cameraView = CameraView()
