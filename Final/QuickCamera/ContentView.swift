@@ -52,7 +52,8 @@ struct ContentView: View {
           Spacer()
           HStack {
             Spacer()
-              Button {
+              //Remove recording capabilities
+              /*Button {
                 if !isRecording {
                   cameraView.startRecording()
                 } else {
@@ -63,11 +64,18 @@ struct ContentView: View {
                 Image(systemName: "record.circle")
                   .font(.system(size: 60))
                   .foregroundColor(isRecording ? Color.red : Color.white)
-              }
+              }*/
+              VStack{
+                  Spacer()
               Button("Show Video"){
                   avatarshowing = true
               }
-              Spacer()
+              .font(.system(size: 30))
+              .padding()
+              .background(Color.yellow)
+              .cornerRadius(10)
+              .foregroundColor(.white)
+              }
             }
           .fullScreenCover(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
           }

@@ -60,6 +60,11 @@ struct Avatar: View {
         Button("Finish"){
             finalpageshowing = true
         }
+        .font(.system(size: 30))
+        .padding()
+        .background(Color.yellow)
+        .cornerRadius(10)
+        .foregroundColor(.white)
       }
     .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
     }
