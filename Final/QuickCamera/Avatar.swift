@@ -16,6 +16,7 @@ struct Avatar: View {
     private var videoURL: URL?
 
   @State var isRecording = false
+    @State private var camerashowing = false
     @State private var finalpageshowing = false
     @State private var popupshowing = true
 
@@ -45,6 +46,15 @@ struct Avatar: View {
     Spacer()
     HStack {
       Spacer()
+        Button("Back"){
+            camerashowing = true
+        }
+        .font(.system(size: 20))
+        .padding()
+        .background(Color.yellow)
+        .cornerRadius(10)
+        .foregroundColor(.white)
+        
         Button {
           if !isRecording {
             cameraView.startRecording()
@@ -66,6 +76,7 @@ struct Avatar: View {
         .cornerRadius(10)
         .foregroundColor(.white)
       }
+    .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
     .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
     .sheet(isPresented:$popupshowing,onDismiss:{},content:{PopUp()})
     }

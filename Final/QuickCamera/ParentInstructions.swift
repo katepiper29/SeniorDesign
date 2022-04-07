@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ParentInstructions: View {
-    @State private var page2showing = false
+    @State private var page3showing = false
     var body: some View {
         ZStack{
             // place background here
@@ -37,9 +37,9 @@ struct ParentInstructions: View {
                     .padding()
                 Button("Click Here when you are ready to play!")
                     {
-                    page2showing = true
+                    page3showing = true
                 }
-                .fullScreenCover(isPresented: $page2showing, onDismiss: {}, content: {Page2()})
+                .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})
                 
             }
         }

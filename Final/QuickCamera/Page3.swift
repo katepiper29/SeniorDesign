@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Page3: View {
+    @State private var page1showing = false
     @State private var page4showing = false
     
     var body: some View {
@@ -27,7 +28,16 @@ struct Page3: View {
                 .background(Color.yellow)
                 .cornerRadius(10)
                 .foregroundColor(.white)
+                Button("Back"){
+                    page1showing = true
+                }
+                .font(.system(size: 20))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
             }
+            .fullScreenCover(isPresented: $page1showing, onDismiss: {}, content: {Page1()})
             .fullScreenCover(isPresented: $page4showing, onDismiss: {}, content: {Page4()})
         }
     }

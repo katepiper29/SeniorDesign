@@ -10,6 +10,7 @@
 import SwiftUI
 
 struct Page4: View {
+    @State private var page3showing = false
     @State private var camerashowing = false
     
     var body: some View {
@@ -29,11 +30,22 @@ struct Page4: View {
                 .background(Color.yellow)
                 .cornerRadius(10)
                 .foregroundColor(.white)
+                Button("Back"){
+                    page3showing = true
+                }
+                .font(.system(size: 20))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                
             }
+
+        }
+        .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})
             .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
         }
     }
-}
 
 struct Page4_Previews: PreviewProvider {
     static var previews: some View {

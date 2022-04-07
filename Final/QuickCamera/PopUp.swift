@@ -13,6 +13,7 @@ struct PopUp: View {
         VStack{
             Text("Parents: Please start the recording and then play the video. When the video ends, please stop the recording and then click 'Finish'.")
                 .padding(20)
+                .multilineTextAlignment(.center)
             Text("Swipe down to remove these instructions.")
         }
     }
