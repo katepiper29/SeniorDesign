@@ -57,8 +57,18 @@ class CameraViewController: UIViewController {
     setupSession()
     setupPreview()
     startSession()
-      
   }
+    
+    //LOCKS THE ENTIRE APP IN PORTRAIT
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            return .portrait
+        }
+        else{
+            return .portrait
+        }
+    }
+    
 
   override func viewWillDisappear(_ animated: Bool) {
     stopSession()
