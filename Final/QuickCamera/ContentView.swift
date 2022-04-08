@@ -47,6 +47,15 @@ struct ContentView: View {
   
     var cameraView = CameraView()
     
+    //LOCKS THE ENTIRE APP IN PORTRAIT
+    var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            return .portrait
+        }
+        else{
+            return .portrait
+        }
+    }
 
     var body: some View {
         VStack {
@@ -103,9 +112,9 @@ struct ContentView: View {
             .onAppear {
             print("Here")
                 UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation") // Forcing the rotation to portrait
-            AppDelegate.orientationLock = .portrait // And making sure it stays that way
+            /*AppDelegate.orientationLock = .portrait // And making sure it stays that way
             }.onDisappear {
-                        AppDelegate.orientationLock = .all
+            AppDelegate.orientationLock = .all */
         }
         
     }

@@ -59,15 +59,6 @@ class CameraViewController: UIViewController {
     startSession()
   }
     
-    //LOCKS THE ENTIRE APP IN PORTRAIT
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        if UIDevice.current.userInterfaceIdiom == .pad{
-            return .portrait
-        }
-        else{
-            return .portrait
-        }
-    }
     
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -76,6 +67,8 @@ class CameraViewController: UIViewController {
 
   func setupSession() {
     captureSession.beginConfiguration()
+      
+      
       //set default camera as front facing
       guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) else {
       return

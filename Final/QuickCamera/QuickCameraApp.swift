@@ -45,6 +45,7 @@ struct QuickCameraApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
         
+    //sets default orientation to portrait
     static var orientationLock = UIInterfaceOrientationMask.portrait //By default you want all your views to rotate freely
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {

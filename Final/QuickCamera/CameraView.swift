@@ -40,7 +40,7 @@ struct CameraView: UIViewControllerRepresentable {
 
   init() {
     cameraViewController = CameraViewController()
-      AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
+      //AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
   }
 
   func makeUIViewController(context: Context) -> CameraViewController {
