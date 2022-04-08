@@ -41,6 +41,7 @@ struct ContentView: View {
   @State var isRecording = false
     @State private var page4showing = false
     @State private var avatarshowing = false
+    @State private var popup_cameracheck_showing = true
 
     @State var orientation:UIDeviceOrientation = UIDevice.current.orientation
   
@@ -69,7 +70,20 @@ struct ContentView: View {
               }*/
               VStack{
                   Spacer()
-              Button("Show Video"){
+            HStack{
+              
+                Button("Back"){
+                      page4showing = true
+                  }
+                  .font(.system(size: 30))
+                  .padding()
+                  .background(Color.yellow)
+                  .cornerRadius(10)
+                  .foregroundColor(.white)
+                  
+                Spacer()
+                
+                Button("Next"){
                   avatarshowing = true
               }
               .font(.system(size: 30))
@@ -77,19 +91,14 @@ struct ContentView: View {
               .background(Color.yellow)
               .cornerRadius(10)
               .foregroundColor(.white)
-                  
-                Button("Back"){
-                      page4showing = true
-                  }
-                  .font(.system(size: 20))
-                  .padding()
-                  .background(Color.yellow)
-                  .cornerRadius(10)
-                  .foregroundColor(.white)
+                
+
+            }
               }
             }
           .fullScreenCover(isPresented:$page4showing, onDismiss:{}, content:{Page4()})
           .fullScreenCover(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
+          .sheet(isPresented:$popup_cameracheck_showing,onDismiss:{},content:{PopUpCheckCamera()})
           }
             .onAppear {
             print("Here")

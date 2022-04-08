@@ -22,22 +22,31 @@ struct Page4: View {
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
                     .padding(40)
-                Button("Check Camera!"){
-                    camerashowing = true
-                }
-                .font(.system(size: 40))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
+                
+                HStack{
+                    Spacer()
                 Button("Back"){
                     page3showing = true
                 }
-                .font(.system(size: 20))
+                .font(.system(size: 30))
                 .padding()
                 .background(Color.yellow)
                 .cornerRadius(10)
                 .foregroundColor(.white)
+                
+                    Spacer()
+                    
+                Button("Check Camera"){
+                    camerashowing = true
+                }
+                .font(.system(size: 30))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                
+                    Spacer()
+                }
                 
             }
 

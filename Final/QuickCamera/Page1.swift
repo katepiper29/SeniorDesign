@@ -18,6 +18,7 @@ struct Page1: View {
                 .resizable()
             VStack{
                 Text("Welcome to our Game!")
+                    .fontWeight(.heavy)
                     .font(.system(size: 60))
                     .padding(40)
                 Button("Start"){
@@ -31,6 +32,7 @@ struct Page1: View {
                 .foregroundColor(.white)
                 
                 .padding(40)
+                
                 Button("Parent Help Page") {
                     ParentInstructionsshowing = true
                 }

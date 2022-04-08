@@ -45,28 +45,29 @@ struct Avatar: View {
           VStack {
     Spacer()
     HStack {
-      Spacer()
         Button("Back"){
             camerashowing = true
         }
-        .font(.system(size: 20))
+        .font(.system(size: 30))
         .padding()
         .background(Color.yellow)
         .cornerRadius(10)
         .foregroundColor(.white)
-        
-        Button {
+        Spacer()
+        Button ("Start/Stop Recording"){
           if !isRecording {
             cameraView.startRecording()
           } else {
             cameraView.stopRecording()
           }
           isRecording.toggle()
-        } label: {
-          Image(systemName: "record.circle")
-            .font(.system(size: 60))
-            .foregroundColor(isRecording ? Color.red : Color.white)
         }
+            .font(.system(size: 30))
+            .padding()
+            .background(isRecording ? Color.red : Color.white)
+            .cornerRadius(10)
+            .foregroundColor(.black)
+        Spacer()
         Button("Finish"){
             finalpageshowing = true
         }

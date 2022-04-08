@@ -16,12 +16,33 @@ struct Finalpage: View {
             VStack{
                 Text("Congratulations!")
                     .fontWeight(.heavy)
+                    .font(.system(size: 50))
                     .padding()
+                HStack{
+                    
+                Spacer()
+                    
                 Button("Return to Home") {
                     page1showing = true
                 }
-                Button("Upload your video") {
+                .font(.system(size: 30))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                    
+                Spacer()
+                    
+                Button("Upload Your Video") {
                     UIApplication.shared.open(URL(string: "https://account.box.com/login")! as URL, options: [:],completionHandler:nil)
+                }
+                .font(.system(size: 30))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                    
+                Spacer()
                 }
             
             }
