@@ -20,6 +20,9 @@ struct Finalpage: View {
                 Button("Return to Home") {
                     page1showing = true
                 }
+                Button("Upload your video") {
+                    UIApplication.shared.open(URL(string: "https://account.box.com/login")! as URL, options: [:],completionHandler:nil)
+                }
             
             }
             .fullScreenCover(isPresented: $page1showing, onDismiss: {}, content: {Page1()})
