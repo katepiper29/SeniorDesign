@@ -21,7 +21,7 @@ struct Avatar: View {
     @State private var popupshowing = true
 
     init() {
-        videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mov")
+        videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mp4")
     }
     
     
@@ -43,6 +43,12 @@ struct Avatar: View {
           }
           
           VStack {
+    Spacer()
+VStack{
+    Spacer()
+    Spacer()
+    Spacer()
+    Spacer()
     Spacer()
     HStack {
         Button("Back"){
@@ -77,6 +83,8 @@ struct Avatar: View {
         .cornerRadius(10)
         .foregroundColor(.white)
       }
+    Spacer()
+}
     .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
     .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
     .sheet(isPresented:$popupshowing,onDismiss:{},content:{PopUp()})

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040AC41C27FFC087003FF1A8 /* PopUpCheckCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AC41B27FFC087003FF1A8 /* PopUpCheckCamera.swift */; };
+		040AC42027FFD051003FF1A8 /* Avatar.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 040AC41F27FFD051003FF1A8 /* Avatar.mp4 */; };
 		04466EDE27F8F4D500152379 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EDD27F8F4D500152379 /* Avatar.swift */; };
 		04466EE027F8F50700152379 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EDF27F8F50700152379 /* VideoPlayerController.swift */; };
 		04466EE227F8F52B00152379 /* Finalpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EE127F8F52B00152379 /* Finalpage.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		040AC41B27FFC087003FF1A8 /* PopUpCheckCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCheckCamera.swift; sourceTree = "<group>"; };
+		040AC41F27FFD051003FF1A8 /* Avatar.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Avatar.mp4; path = ../../../Avatar.mp4; sourceTree = "<group>"; };
 		04466EDD27F8F4D500152379 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		04466EDF27F8F50700152379 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		04466EE127F8F52B00152379 /* Finalpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finalpage.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				D339619525CE17E500A5B699 /* ContentView.swift */,
 				04BC2C9B27FB29F400F767B9 /* PopUp.swift */,
 				04466EDD27F8F4D500152379 /* Avatar.swift */,
+				040AC41F27FFD051003FF1A8 /* Avatar.mp4 */,
 				04BC2C9927FA88B800F767B9 /* Avatar.mov */,
 				04466EDF27F8F50700152379 /* VideoPlayerController.swift */,
 				04466EE127F8F52B00152379 /* Finalpage.swift */,
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040AC42027FFD051003FF1A8 /* Avatar.mp4 in Resources */,
 				D339619B25CE17E800A5B699 /* Preview Assets.xcassets in Resources */,
 				04BC2C9A27FA88B800F767B9 /* Avatar.mov in Resources */,
 				D339619825CE17E800A5B699 /* Assets.xcassets in Resources */,
