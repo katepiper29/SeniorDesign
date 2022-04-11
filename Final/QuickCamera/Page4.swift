@@ -23,7 +23,7 @@ struct Page4: View {
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
                     .padding(40)
-                
+                Image("")
                 HStack{
                     Spacer()
                 Button("Back"){

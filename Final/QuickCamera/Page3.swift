@@ -19,8 +19,11 @@ struct Page3: View {
                 Text("Please place a piece of tape on the ground as shown")
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
-                    .padding(40)
-                
+                    .padding()
+                Image("Tape Layout")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 600.0, height: 600.0)
                 HStack{
                 Spacer()
                     Button("Back"){
