@@ -8,6 +8,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct Page4: View {
     @State private var page3showing = false
@@ -48,7 +49,7 @@ struct Page4: View {
                     Spacer()
                 }
                 
-            }
+            }   // ZStack
 
         }
         .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})

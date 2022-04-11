@@ -15,9 +15,9 @@
 		0495B56927F7B34E00E302F4 /* Page1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495B56827F7B34E00E302F4 /* Page1.swift */; };
 		0495B56B27F7B7E000E302F4 /* Page2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495B56A27F7B7E000E302F4 /* Page2.swift */; };
 		04BC2C8C27FA208900F767B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC2C8B27FA208900F767B9 /* SceneDelegate.swift */; };
-		04BC2C9A27FA88B800F767B9 /* Avatar.mov in Resources */ = {isa = PBXBuildFile; fileRef = 04BC2C9927FA88B800F767B9 /* Avatar.mov */; };
 		04BC2C9C27FB29F400F767B9 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC2C9B27FB29F400F767B9 /* PopUp.swift */; };
 		18693B5827F7EE5D0075CA8F /* Page3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18693B5627F7ED960075CA8F /* Page3.swift */; };
+		189E7D3928048B010084B24C /* Step_Away.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189E7D3828048B010084B24C /* Step_Away.mp3 */; };
 		18CC255827F7F53900F16B5D /* Page4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC255727F7F53900F16B5D /* Page4.swift */; };
 		18CC255A27F7F57000F16B5D /* ParentInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC255927F7F57000F16B5D /* ParentInstructions.swift */; };
 		D339619425CE17E500A5B699 /* QuickCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339619325CE17E500A5B699 /* QuickCameraApp.swift */; };
@@ -37,9 +37,9 @@
 		0495B56827F7B34E00E302F4 /* Page1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1.swift; sourceTree = "<group>"; };
 		0495B56A27F7B7E000E302F4 /* Page2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2.swift; sourceTree = "<group>"; };
 		04BC2C8B27FA208900F767B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04BC2C9927FA88B800F767B9 /* Avatar.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Avatar.mov; path = ../../../../Documents/Avatar.mov; sourceTree = "<group>"; };
 		04BC2C9B27FB29F400F767B9 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		18693B5627F7ED960075CA8F /* Page3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3.swift; sourceTree = "<group>"; };
+		189E7D3828048B010084B24C /* Step_Away.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Step_Away.mp3; path = ../../../Step_Away.mp3; sourceTree = "<group>"; };
 		18CC255727F7F53900F16B5D /* Page4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4.swift; sourceTree = "<group>"; };
 		18CC255927F7F57000F16B5D /* ParentInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInstructions.swift; sourceTree = "<group>"; };
 		D339619025CE17E500A5B699 /* QuickCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,12 +90,12 @@
 				0495B56A27F7B7E000E302F4 /* Page2.swift */,
 				18693B5627F7ED960075CA8F /* Page3.swift */,
 				18CC255727F7F53900F16B5D /* Page4.swift */,
+				189E7D3828048B010084B24C /* Step_Away.mp3 */,
 				040AC41B27FFC087003FF1A8 /* PopUpCheckCamera.swift */,
 				D339619525CE17E500A5B699 /* ContentView.swift */,
 				04BC2C9B27FB29F400F767B9 /* PopUp.swift */,
 				04466EDD27F8F4D500152379 /* Avatar.swift */,
 				040AC41F27FFD051003FF1A8 /* Avatar.mp4 */,
-				04BC2C9927FA88B800F767B9 /* Avatar.mov */,
 				04466EDF27F8F50700152379 /* VideoPlayerController.swift */,
 				04466EE127F8F52B00152379 /* Finalpage.swift */,
 				18CC255927F7F57000F16B5D /* ParentInstructions.swift */,
@@ -171,9 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189E7D3928048B010084B24C /* Step_Away.mp3 in Resources */,
 				040AC42027FFD051003FF1A8 /* Avatar.mp4 in Resources */,
 				D339619B25CE17E800A5B699 /* Preview Assets.xcassets in Resources */,
-				04BC2C9A27FA88B800F767B9 /* Avatar.mov in Resources */,
 				D339619825CE17E800A5B699 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickCamera/Preview Content\"";
-				DEVELOPMENT_TEAM = P87Q5M2V8Z;
+				DEVELOPMENT_TEAM = NDVKA2PBV3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -351,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickCamera/Preview Content\"";
-				DEVELOPMENT_TEAM = P87Q5M2V8Z;
+				DEVELOPMENT_TEAM = NDVKA2PBV3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

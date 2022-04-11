@@ -30,7 +30,6 @@ struct Page1: View {
                 .background(Color.yellow)
                 .cornerRadius(10)
                 .foregroundColor(.white)
-                
                 .padding(40)
                 
                 Button("Parent Help Page") {
