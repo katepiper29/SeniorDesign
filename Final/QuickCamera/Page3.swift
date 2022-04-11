@@ -20,7 +20,7 @@ struct Page3: View {
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
                     .padding()
-                Image("Tape Layout")
+                Image("TapeLayout")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 600.0, height: 600.0)
