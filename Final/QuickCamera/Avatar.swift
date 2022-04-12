@@ -9,8 +9,6 @@ import SwiftUI
 import AVFoundation
 import AVKit
 
-// checking push with a comment
-
 struct Avatar: View {
     
     private var videoURL: URL?
@@ -31,22 +29,23 @@ struct Avatar: View {
 
   var body: some View {
       ZStack{
-     cameraView
-
-      if let url = videoURL {
+          cameraView
+          
+     if let url = videoURL {
           if #available(iOS 14.0, *) {
               VideoPlayer(player: AVPlayer(url: url))
           }
           else {
               VideoPlayerController(videoURL: url)
-          }
+         }
           }
           else {
               Text("Video URL not available")
-          }
+         }
           
           VStack {
     Spacer()
+
 VStack{
     Spacer()
     Spacer()
