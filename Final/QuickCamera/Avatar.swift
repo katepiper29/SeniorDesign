@@ -19,6 +19,8 @@ struct Avatar: View {
     @State private var camerashowing = false
     @State private var finalpageshowing = false
     @State private var popupshowing = true
+    // addition
+    @State var player = AVPlayer()
 
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mp4")
@@ -30,17 +32,18 @@ struct Avatar: View {
   var body: some View {
       ZStack{
      cameraView
-      if let url = videoURL {
-          if #available(iOS 14.0, *) {
-              VideoPlayer(player: AVPlayer(url: url))
-          }
-          else {
-              VideoPlayerController(videoURL: url)
-          }
-          }
-          else {
-              Text("Video URL not available")
-          }
+
+//      if let url = videoURL {
+  //        if #available(iOS 14.0, *) {
+    //          VideoPlayer(player: AVPlayer(url: url))
+    //      }
+      //    else {
+        //      VideoPlayerController(videoURL: url)
+      //    }
+    //      }
+      //    else {
+          //    Text("Video URL not available")
+        //  }
           
           VStack {
     Spacer()
