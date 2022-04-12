@@ -11,10 +11,12 @@ struct PopUp: View {
     
     var body: some View {
         VStack{
-            Text("Parents: Please start the recording and then play the video. When the video ends, please stop the recording and then click 'Finish'.")
+            Text("Parents:\n Please start the recording and then play the video. When the video ends, please stop the recording and then click 'Finish'.")
                 .padding(20)
                 .multilineTextAlignment(.center)
+                .font(.system(size: 30, weight: .semibold))
             Text("Swipe down to remove these instructions.")
+                .font(.system(size: 20, weight: .regular))
         }
     }
 }

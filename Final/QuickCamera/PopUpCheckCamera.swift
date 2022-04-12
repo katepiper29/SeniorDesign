@@ -14,7 +14,9 @@ struct PopUpCheckCamera: View {
             Text("Parents: Please make sure your child is within view of the camera.")
                 .padding(20)
                 .multilineTextAlignment(.center)
+                .font(.system(size: 30, weight: .semibold))
             Text("Swipe down to remove these instructions.")
+                .font(.system(size: 20, weight: .regular))
         }
     }
 }

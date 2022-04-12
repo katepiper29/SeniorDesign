@@ -20,7 +20,7 @@ struct Avatar: View {
     @State private var finalpageshowing = false
     @State private var popupshowing = true
     // addition
-    @State var player = AVPlayer()
+    @State var ButtonTitle :String = "Start Recording"
 
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mp4")
@@ -33,17 +33,17 @@ struct Avatar: View {
       ZStack{
      cameraView
 
-//      if let url = videoURL {
-  //        if #available(iOS 14.0, *) {
-    //          VideoPlayer(player: AVPlayer(url: url))
-    //      }
-      //    else {
-        //      VideoPlayerController(videoURL: url)
-      //    }
-    //      }
-      //    else {
-          //    Text("Video URL not available")
-        //  }
+      if let url = videoURL {
+          if #available(iOS 14.0, *) {
+              VideoPlayer(player: AVPlayer(url: url))
+          }
+          else {
+              VideoPlayerController(videoURL: url)
+          }
+          }
+          else {
+              Text("Video URL not available")
+          }
           
           VStack {
     Spacer()
@@ -63,11 +63,13 @@ VStack{
         .cornerRadius(10)
         .foregroundColor(.white)
         Spacer()
-        Button ("Start/Stop Recording"){
+        Button (ButtonTitle){
           if !isRecording {
             cameraView.startRecording()
+            ButtonTitle = "Stop Recording"
           } else {
             cameraView.stopRecording()
+              ButtonTitle = "Start Recording"
           }
           isRecording.toggle()
         }
