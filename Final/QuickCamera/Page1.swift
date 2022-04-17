@@ -23,6 +23,10 @@ struct Page1: View {
                     .font(.system(size: 60))
                     .padding(40)
                 Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
                 HStack{
                     Spacer()
                     Button("Parent Help Page") {
@@ -46,7 +50,8 @@ struct Page1: View {
                     .padding(40)
                     
                     Spacer()
-                }
+                }   //HStack
+                Spacer()
             }
             .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})
                              

@@ -78,6 +78,14 @@ struct ContentView: View {
                   .foregroundColor(isRecording ? Color.red : Color.white)
               }*/
               VStack{
+                  Button("Instructions") {
+                      popup_cameracheck_showing = true
+                  }
+                  .font(.system(size: 30))
+                  .padding()
+                  .background(Color.yellow)
+                  .cornerRadius(10)
+                  .foregroundColor(.white)
                   Spacer()
                   Spacer()
                   Spacer()

@@ -28,6 +28,7 @@ struct Page4: View {
                 Spacer()
                 Spacer()
                 Spacer()
+                Spacer()
                 HStack{
                     Spacer()
                     Button("Back"){
