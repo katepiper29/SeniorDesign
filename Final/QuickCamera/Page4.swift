@@ -19,39 +19,43 @@ struct Page4: View {
             Image("BunnyVertical")
                 .resizable()
             VStack{
-            Text("Please make sure your whole body is visible")
-                    .font(.system(size: 60))
-                    .multilineTextAlignment(.center)
-                    .padding(40)
+                Spacer()
+                Text("Please make sure your whole body is visible")
+                        .font(.system(size: 60))
+                        .multilineTextAlignment(.center)
+                        .padding(40)
                 Image("")
+                Spacer()
+                Spacer()
+                Spacer()
                 HStack{
                     Spacer()
-                Button("Back"){
-                    page3showing = true
-                }
-                .font(.system(size: 30))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                
-                    Spacer()
+                    Button("Back"){
+                        page3showing = true
+                    }
+                    .font(.system(size: 30))
+                    .padding()
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
                     
-                Button("Check Camera"){
-                    camerashowing = true
-                }
-                .font(.system(size: 30))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                
+                        Spacer()
+                        
+                    Button("Check Camera"){
+                        camerashowing = true
+                    }
+                    .font(.system(size: 30))
+                    .padding()
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    
                     Spacer()
-                }
+                }   // HStack
+                Spacer()
+            }   // VStack
                 
-            }   // ZStack
-
-        }
+        }   // ZStack
         .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})
             .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
         }

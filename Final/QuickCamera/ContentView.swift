@@ -79,8 +79,12 @@ struct ContentView: View {
               }*/
               VStack{
                   Spacer()
+                  Spacer()
+                  Spacer()
+                  Spacer()
+                  Spacer()
+                  Spacer()
             HStack{
-              
                 Button("Back"){
                       page4showing = true
                   }
@@ -91,20 +95,22 @@ struct ContentView: View {
                   .foregroundColor(.white)
                   
                 Spacer()
+                Spacer()
+                Spacer()
                 
                 Button("Next"){
                   avatarshowing = true
               }
-              .font(.system(size: 30))
-              .padding()
-              .background(Color.yellow)
-              .cornerRadius(10)
-              .foregroundColor(.white)
+                .font(.system(size: 30))
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .foregroundColor(.white)
                 
-
-            }
-              }
-            }
+            }   //HStack
+            Spacer()
+        }
+    }
           .fullScreenCover(isPresented:$page4showing, onDismiss:{}, content:{Page4()})
           .fullScreenCover(isPresented:$avatarshowing, onDismiss:{}, content:{Avatar()})
           .sheet(isPresented:$popup_cameracheck_showing,onDismiss:{},content:{PopUpCheckCamera()})

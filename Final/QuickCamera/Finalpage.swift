@@ -14,36 +14,42 @@ struct Finalpage: View {
             Image("BunnyVertical")
                 .resizable()
             VStack{
+                Spacer()
                 Text("Congratulations!")
                     .fontWeight(.heavy)
-                    .font(.system(size: 50))
+                    .font(.system(size: 80))
                     .padding()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
                 HStack{
                     
+                    Spacer()
+                        
+                    Button("Return to Home") {
+                        page1showing = true
+                    }
+                    .font(.system(size: 30))
+                    .padding()
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                        
+                    Spacer()
+                        
+                    Button("Upload Your Video") {
+                        UIApplication.shared.open(URL(string: "https://account.box.com/login")! as URL, options: [:],completionHandler:nil)
+                    }
+                    .font(.system(size: 30))
+                    .padding()
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                        
+                    Spacer()
+                }   // HStack
                 Spacer()
-                    
-                Button("Return to Home") {
-                    page1showing = true
-                }
-                .font(.system(size: 30))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                    
-                Spacer()
-                    
-                Button("Upload Your Video") {
-                    UIApplication.shared.open(URL(string: "https://account.box.com/login")! as URL, options: [:],completionHandler:nil)
-                }
-                .font(.system(size: 30))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                    
-                Spacer()
-                }
             
             }
             .fullScreenCover(isPresented: $page1showing, onDismiss: {}, content: {Page1()})

@@ -15,10 +15,10 @@ struct ParentInstructions: View {
             Image("BunnyVertical")
                 .resizable()
             VStack{
+                Spacer()
                 Text("Welcome Parents/Guardians")
                     .font(.system(size: 60, weight: .heavy))
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.yellow)
                     .padding(50)
                 //    Spacer()
                 Text("Thank you so much for agreeing to participate in the remote motor development study. During this test, your child will be participating in a game where they will follow along with movements performed by a bunny.")

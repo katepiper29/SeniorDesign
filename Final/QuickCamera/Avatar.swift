@@ -31,70 +31,78 @@ struct Avatar: View {
       ZStack{
           cameraView
           
-     if let url = videoURL {
-          if #available(iOS 14.0, *) {
-              VideoPlayer(player: AVPlayer(url: url))
-          }
-          else {
-              VideoPlayerController(videoURL: url)
-         }
-          }
-          else {
-              Text("Video URL not available")
-         }
+         if let url = videoURL {
+              if #available(iOS 14.0, *) {
+                  VideoPlayer(player: AVPlayer(url: url))
+              }
+              else {
+                  VideoPlayerController(videoURL: url)
+             }
+              }
+              else {
+                  Text("Video URL not available")
+             }
           
           VStack {
-    Spacer()
+              Button("Instructions") {
+                  popupshowing = true
+              }
+              .font(.system(size: 30))
+              .padding()
+              .background(Color.yellow)
+              .cornerRadius(10)
+              .foregroundColor(.white)
+              Spacer()
 
-VStack{
-    Spacer()
-    Spacer()
-    Spacer()
-    Spacer()
-    Spacer()
-    HStack {
-        Button("Back"){
-            camerashowing = true
-        }
-        .font(.system(size: 30))
-        .padding()
-        .background(Color.yellow)
-        .cornerRadius(10)
-        .foregroundColor(.white)
-        Spacer()
-        Button (ButtonTitle){
-          if !isRecording {
-            cameraView.startRecording()
-            ButtonTitle = "Stop Recording"
-          } else {
-            cameraView.stopRecording()
-              ButtonTitle = "Start Recording"
+              VStack{
+                  Spacer()
+                  Spacer()
+                  Spacer()
+                  Spacer()
+                  Spacer()
+                  HStack {
+                      Button("Back"){
+                          camerashowing = true
+                      }
+                      .font(.system(size: 30))
+                      .padding()
+                      .background(Color.yellow)
+                      .cornerRadius(10)
+                      .foregroundColor(.white)
+                      Spacer()
+                      Button (ButtonTitle){
+                          if !isRecording {
+                              cameraView.startRecording()
+                              ButtonTitle = "Stop Recording"
+                          } else {
+                              cameraView.stopRecording()
+                              ButtonTitle = "Start Recording"
+                          }
+                          isRecording.toggle()
+                      }
+                      .font(.system(size: 30))
+                      .padding()
+                      .background(isRecording ? Color.red : Color.white)
+                      .cornerRadius(10)
+                      .foregroundColor(.black)
+                      Spacer()
+                      Button("Finish"){
+                          finalpageshowing = true
+                      }
+                      .font(.system(size: 30))
+                      .padding()
+                      .background(Color.yellow)
+                      .cornerRadius(10)
+                      .foregroundColor(.white)
+                  }
+                  Spacer()
+              }
+              .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
+              .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
+              .sheet(isPresented:$popupshowing,onDismiss:{},content:{PopUp()})
           }
-          isRecording.toggle()
-        }
-            .font(.system(size: 30))
-            .padding()
-            .background(isRecording ? Color.red : Color.white)
-            .cornerRadius(10)
-            .foregroundColor(.black)
-        Spacer()
-        Button("Finish"){
-            finalpageshowing = true
-        }
-        .font(.system(size: 30))
-        .padding()
-        .background(Color.yellow)
-        .cornerRadius(10)
-        .foregroundColor(.white)
       }
-    Spacer()
-}
-    .fullScreenCover(isPresented: $camerashowing, onDismiss: {}, content: {ContentView()})
-    .fullScreenCover(isPresented: $finalpageshowing, onDismiss: {}, content: {Finalpage()})
-    .sheet(isPresented:$popupshowing,onDismiss:{},content:{PopUp()})
-    }
   }
-}
 }
 
 struct Avatar_Previews: PreviewProvider {

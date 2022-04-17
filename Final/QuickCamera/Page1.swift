@@ -17,29 +17,36 @@ struct Page1: View {
             Image("BunnyVertical")
                 .resizable()
             VStack{
+                Spacer()
                 Text("Welcome to our Game!")
                     .fontWeight(.heavy)
                     .font(.system(size: 60))
                     .padding(40)
-                Button("Start"){
- 
-                    page3showing = true
+                Spacer()
+                HStack{
+                    Spacer()
+                    Button("Parent Help Page") {
+                        ParentInstructionsshowing = true
+                    }
+                    .font(.system(size: 30))
+                    .padding()
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    Spacer()
+                    Button("Start"){
+     
+                        page3showing = true
+                    }
+                    .font(.system(size: 40))
+                    .padding()
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .padding(40)
+                    
+                    Spacer()
                 }
-                .font(.system(size: 40))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                .padding(40)
-                
-                Button("Parent Help Page") {
-                    ParentInstructionsshowing = true
-                }
-                .font(.system(size: 30))
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(10)
-                .foregroundColor(.white)
             }
             .fullScreenCover(isPresented: $page3showing, onDismiss: {}, content: {Page3()})
                              
