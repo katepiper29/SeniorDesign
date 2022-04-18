@@ -26,14 +26,14 @@ struct Avatar: View {
   
     let videoLocalNames = ["Avatar"]
     
-    let rachel = AVPlayer(url:  Bundle.main.url(forResource: "Avatar", withExtension: "mp4")!)
+    let video = AVPlayer(url:  Bundle.main.url(forResource: "Avatar", withExtension: "mp4")!)
     
   var cameraView = CameraView()
 
   var body: some View {
       ZStack{
           cameraView
-          VideoPlayer(player: rachel)
+          VideoPlayer(player: video)
          // player(videoName: "Avatar")
           
 /*         if let url = videoURL {
@@ -86,12 +86,12 @@ struct Avatar: View {
                       Button (ButtonTitle){
                           if !isRecording {
                               cameraView.startRecording()
-                              ButtonTitle = "Pause Test"
-                              rachel.play()
+                              ButtonTitle = "End Test"
+                              video.play()
                           } else {
                               cameraView.stopRecording()
                               ButtonTitle = "Begin Test"
-                              rachel.pause()
+                              video.pause()
                           }
                           isRecording.toggle()
                       }
@@ -127,7 +127,7 @@ struct Avatar_Previews: PreviewProvider {
     }
 }
 
-struct player : UIViewControllerRepresentable {
+/*struct player : UIViewControllerRepresentable {
     
     var videoName: String = "Avatar"
     
@@ -144,4 +144,4 @@ struct player : UIViewControllerRepresentable {
         
     }
     
-}
+} */

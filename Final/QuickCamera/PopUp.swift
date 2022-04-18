@@ -14,7 +14,7 @@ struct PopUp: View {
             Color.cyan
             VStack{
                // Text("Parents:\n Please make sure that the volume is turned up and then start the recording and then play the video. When the video ends, please stop the recording and then click 'Finish'.")
-                Text("Parents Please: \n -Make sure the volume is turned up\n -Start the recording\n -Play the video\n\n Once the video is done please:\n -Stop the recording\n -Proceed to the next page\n Thanks!")
+                Text("Parents Please: \n -Make sure the volume is turned up\n -Start the test\n\n Once the video is done please:\n -Stop the test\n -Proceed to the next page\n Thanks!")
                     .padding(20)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 30, weight: .semibold))

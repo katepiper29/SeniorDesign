@@ -18,8 +18,9 @@ struct Page1: View {
                 .resizable()
             VStack{
                 Spacer()
-                Text("Welcome to our Game!")
+                Text("Welcome to Follow the Bunny!")
                     .fontWeight(.heavy)
+                    .multilineTextAlignment(.center)
                     .font(.system(size: 60))
                     .padding(40)
                 Spacer()
