@@ -18,20 +18,25 @@ struct Avatar: View {
     @State private var finalpageshowing = false
     @State private var popupshowing = true
     // addition
-    @State var ButtonTitle :String = "Start Recording"
+    @State var ButtonTitle :String = "Start Test"
 
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mp4")
     }
+  
+    let videoLocalNames = ["Avatar"]
     
+    let rachel = AVPlayer(url:  Bundle.main.url(forResource: "Avatar", withExtension: "mp4")!)
     
   var cameraView = CameraView()
 
   var body: some View {
       ZStack{
           cameraView
+          VideoPlayer(player: rachel)
+         // player(videoName: "Avatar")
           
-         if let url = videoURL {
+/*         if let url = videoURL {
               if #available(iOS 14.0, *) {
                   VideoPlayer(player: AVPlayer(url: url))
               }
@@ -41,9 +46,18 @@ struct Avatar: View {
               }
               else {
                   Text("Video URL not available")
-             }
+             } */
           
           VStack {
+          //    VideoPlayer(player: rachel)
+                //      .frame(height: 228)
+         /*     Spacer()
+                    Button {
+                      rachel.play()     // << here !!
+                    } label: {
+                      Text("Play")
+                        .font(.system(size: 26))
+                    } */
               Button("Instructions") {
                   popupshowing = true
               }
@@ -53,7 +67,6 @@ struct Avatar: View {
               .cornerRadius(10)
               .foregroundColor(.white)
               Spacer()
-
               VStack{
                   Spacer()
                   Spacer()
@@ -73,10 +86,12 @@ struct Avatar: View {
                       Button (ButtonTitle){
                           if !isRecording {
                               cameraView.startRecording()
-                              ButtonTitle = "Stop Recording"
+                              ButtonTitle = "Pause Test"
+                              rachel.play()
                           } else {
                               cameraView.stopRecording()
-                              ButtonTitle = "Start Recording"
+                              ButtonTitle = "Begin Test"
+                              rachel.pause()
                           }
                           isRecording.toggle()
                       }
@@ -110,4 +125,23 @@ struct Avatar_Previews: PreviewProvider {
         Avatar()
         Avatar().previewLayout(.fixed(width:568,height:320))
     }
+}
+
+struct player : UIViewControllerRepresentable {
+    
+    var videoName: String = "Avatar"
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<player>) -> AVPlayerViewController {
+        let controller = AVPlayerViewController()
+        let url = Bundle.main.path(forResource: videoName, ofType: "mp4")!
+        let player1 = AVPlayer(url: URL(fileURLWithPath: url))
+        controller.player = player1
+        player1.play()
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<player>) {
+        
+    }
+    
 }

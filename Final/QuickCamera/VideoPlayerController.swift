@@ -23,4 +23,7 @@ struct VideoPlayerController: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
     
     }
+    
 }
+
+
