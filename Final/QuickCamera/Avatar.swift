@@ -19,7 +19,8 @@ struct Avatar: View {
     @State private var popupshowing = true
     // addition
     @State var ButtonTitle :String = "Start Test"
-
+    @State var ButtonTitle2 :String = ""
+    
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mp4")
     }
@@ -92,6 +93,7 @@ struct Avatar: View {
                               cameraView.stopRecording()
                               ButtonTitle = "Begin Test"
                               video.pause()
+                              ButtonTitle2 = "Finish"
                           }
                           isRecording.toggle()
                       }
@@ -101,7 +103,7 @@ struct Avatar: View {
                       .cornerRadius(10)
                       .foregroundColor(.black)
                       Spacer()
-                      Button("Finish"){
+                      Button(ButtonTitle2){
                           finalpageshowing = true
                       }
                       .font(.system(size: 30))
