@@ -16,14 +16,27 @@ struct Page3: View {
             Image("BunnyVertical")
                 .resizable()
             VStack{
+                Spacer()
                 Text("Please place a piece of tape on the ground as shown.")
+                    
+                    .font(.system(size: 60,weight: .bold))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.01)
+                
+                    //original
+                /*
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
-                    .padding()
+                    .padding() */
+                Spacer()
                 Image("TapeLayout")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 600.0, height: 600.0)
+                   // .frame(width: 600.0, height: 600.0)
+                    .minimumScaleFactor(0.01)
+                Spacer()
+                
                 HStack{
                 Spacer()
                     Button("Back"){
@@ -35,6 +48,8 @@ struct Page3: View {
                     .cornerRadius(10)
                     .foregroundColor(.white)
                 
+                Spacer()
+                Spacer()
                 Spacer()
                     
                     Button("Next"){

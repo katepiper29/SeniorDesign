@@ -15,20 +15,50 @@ struct Finalpage: View {
                 .resizable()
             VStack{
                 Spacer()
-                Text("Congratulations!")
+                Text("Great job!")
+                
+                    .font(.system(size: 80))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.25)
+                    .padding()
+                
+                    //original
+                /*
                     .fontWeight(.heavy)
                     .font(.system(size: 80))
                     .padding()
+                 */
                 Spacer()
                 Spacer()
                 Text("Thank you so much for your participation!")
+                
+                    .font(.system(size: 50))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.01)
+                    .padding()
+                
+                //original
+                /*
                     .fontWeight(.bold)
                     .font(.system(size: 50))
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center) */
+                
                 Text("Please upload your video.")
+                   
                     .font(.system(size: 50))
                     .fontWeight(.bold)
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.01)
+                
+                    /*.font(.system(size: 50))
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center) */
+                
                 Spacer()
                 Spacer()
                 HStack{

@@ -19,10 +19,17 @@ struct Page1: View {
             VStack{
                 Spacer()
                 Text("Welcome to Follow the Bunny!")
+                    .font(.system(size: 60))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.01)
+                    /* Original
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 60))
                     .padding(40)
+                     */
                 Spacer()
                 Spacer()
                 Spacer()
@@ -43,7 +50,7 @@ struct Page1: View {
      
                         page3showing = true
                     }
-                    .font(.system(size: 40))
+                    .font(.system(size: 30))
                     .padding()
                     .background(Color.yellow)
                     .cornerRadius(10)

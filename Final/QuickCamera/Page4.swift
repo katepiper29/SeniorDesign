@@ -21,9 +21,17 @@ struct Page4: View {
             VStack{
                 Spacer()
                 Text("Please make sure your whole body is visible.")
-                        .font(.system(size: 60))
+                
+                    .font(.system(size: 60,weight: .bold))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .minimumScaleFactor(0.01)
+                    .padding(40)
+                
+                    //original
+                    /*.font(.system(size: 60))
                         .multilineTextAlignment(.center)
-                        .padding(40)
+                        .padding(40) */
                 Image("")
                 Spacer()
                 Spacer()
