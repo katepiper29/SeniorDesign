@@ -20,6 +20,7 @@ struct Avatar: View {
     // addition
     @State var ButtonTitle :String = "Start Test"
     @State var ButtonTitle2 :String = ""
+    @State var ButtonTitle3 :String = "Back"
     
     init() {
         videoURL = Bundle.main.url(forResource: "Avatar", withExtension: "mp4")
@@ -75,7 +76,7 @@ struct Avatar: View {
                   Spacer()
                   Spacer()
                   HStack {
-                      Button("Back"){
+                      Button(ButtonTitle3){
                           camerashowing = true
                       }
                       .font(.system(size: 30))
@@ -89,6 +90,7 @@ struct Avatar: View {
                               cameraView.startRecording()
                               ButtonTitle = "End Test"
                               video.play()
+                              ButtonTitle3 = ""
                           } else {
                               cameraView.stopRecording()
                               ButtonTitle = "Begin Test"
