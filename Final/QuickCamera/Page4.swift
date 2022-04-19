@@ -20,7 +20,7 @@ struct Page4: View {
                 .resizable()
             VStack{
                 Spacer()
-                Text("Please make sure your whole body is visible")
+                Text("Please make sure your whole body is visible.")
                         .font(.system(size: 60))
                         .multilineTextAlignment(.center)
                         .padding(40)

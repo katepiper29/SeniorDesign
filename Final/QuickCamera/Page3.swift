@@ -16,7 +16,7 @@ struct Page3: View {
             Image("BunnyVertical")
                 .resizable()
             VStack{
-                Text("Please place a piece of tape on the ground as shown")
+                Text("Please place a piece of tape on the ground as shown.")
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
                     .padding()
