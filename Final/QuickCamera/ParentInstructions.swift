@@ -21,7 +21,7 @@ struct ParentInstructions: View {
                     .multilineTextAlignment(.center)
                     .padding(50)
                 //    Spacer()
-                Text("Thank you so much for agreeing to participate in the remote motor development study. During this test, your child will be participating in a game where they will follow along with movements performed by a bunny.")
+                Text("Thank you so much for agreeing to participate in the development of this technology. During this test, your child will be participating in a game where they will follow along with movements performed by a bunny.")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 30, weight: .bold))
                     Spacer()
