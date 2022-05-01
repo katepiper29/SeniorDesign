@@ -3,12 +3,16 @@
 //  QuickCamera
 //
 //  Created by Kate Piper on 4/1/22.
-//
+// This page is the page that opens when the application opens
 
 import SwiftUI
 
 struct Page1: View {
+    
+    // Tape page
     @State private var page3showing = false
+    
+    // Parent instruction page
     @State private var ParentInstructionsshowing = false
     
     var body: some View {
