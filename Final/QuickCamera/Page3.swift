@@ -3,16 +3,22 @@
 //  QuickCamera
 //
 //  Created by Rachel Cutlan on 4/1/22.
+// This page instructs the user to place a piece of tape on the group for the jumping test
 //
 
 import SwiftUI
 
 struct Page3: View {
+    
+    // back button to intro page
     @State private var page1showing = false
+    
+    // check camera page
     @State private var page4showing = false
     
     var body: some View {
         ZStack{
+            // background
             Image("BunnyVertical")
                 .resizable()
             VStack{
@@ -23,17 +29,10 @@ struct Page3: View {
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.01)
-                
-                    //original
-                /*
-                    .font(.system(size: 60))
-                    .multilineTextAlignment(.center)
-                    .padding() */
                 Spacer()
                 Image("TapeLayout")
                     .resizable()
                     .scaledToFit()
-                   // .frame(width: 600.0, height: 600.0)
                     .minimumScaleFactor(0.01)
                 Spacer()
                 

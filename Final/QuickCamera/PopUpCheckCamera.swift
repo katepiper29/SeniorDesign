@@ -3,7 +3,7 @@
 //  QuickCamera
 //
 //  Created by Kate Piper on 4/7/22.
-//
+// This is a pop up page 
 
 import SwiftUI
 

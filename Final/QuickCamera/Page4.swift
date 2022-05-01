@@ -4,14 +4,18 @@
 //
 //  Created by Rachel Cutlan on 4/1/22.
 
-// commit please
+// Page to check camera view
 //
 
 import SwiftUI
 import AVKit
 
 struct Page4: View {
+    
+    // back button to tape page
     @State private var page3showing = false
+    
+    // open camera page
     @State private var camerashowing = false
     
     var body: some View {
@@ -27,11 +31,6 @@ struct Page4: View {
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.01)
                     .padding(40)
-                
-                    //original
-                    /*.font(.system(size: 60))
-                        .multilineTextAlignment(.center)
-                        .padding(40) */
                 Image("")
                 Spacer()
                 Spacer()
