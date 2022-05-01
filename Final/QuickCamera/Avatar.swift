@@ -3,7 +3,7 @@
 //  QuickCamera
 //
 //  Created by Rachel Cutlan on 4/2/22.
-//
+//  This page plays the avatar video and records the child
 
 import SwiftUI
 import AVFoundation
@@ -17,7 +17,7 @@ struct Avatar: View {
     @State private var camerashowing = false
     @State private var finalpageshowing = false
     @State private var popupshowing = true
-    // addition
+    // changes to buttons when clicked
     @State var ButtonTitle :String = "Start Test"
     @State var ButtonTitle2 :String = ""
     @State var ButtonTitle3 :String = "Back"
@@ -36,30 +36,8 @@ struct Avatar: View {
       ZStack{
           cameraView
           VideoPlayer(player: video)
-         // player(videoName: "Avatar")
-          
-/*         if let url = videoURL {
-              if #available(iOS 14.0, *) {
-                  VideoPlayer(player: AVPlayer(url: url))
-              }
-              else {
-                  VideoPlayerController(videoURL: url)
-             }
-              }
-              else {
-                  Text("Video URL not available")
-             } */
           
           VStack {
-          //    VideoPlayer(player: rachel)
-                //      .frame(height: 228)
-         /*     Spacer()
-                    Button {
-                      rachel.play()     // << here !!
-                    } label: {
-                      Text("Play")
-                        .font(.system(size: 26))
-                    } */
               Button("Instructions") {
                   popupshowing = true
               }
@@ -131,21 +109,3 @@ struct Avatar_Previews: PreviewProvider {
     }
 }
 
-/*struct player : UIViewControllerRepresentable {
-    
-    var videoName: String = "Avatar"
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<player>) -> AVPlayerViewController {
-        let controller = AVPlayerViewController()
-        let url = Bundle.main.path(forResource: videoName, ofType: "mp4")!
-        let player1 = AVPlayer(url: URL(fileURLWithPath: url))
-        controller.player = player1
-        player1.play()
-        return controller
-    }
-    
-    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<player>) {
-        
-    }
-    
-} */

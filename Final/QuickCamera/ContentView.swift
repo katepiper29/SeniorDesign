@@ -29,6 +29,10 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+///
+
+
+// This page sets up the camera
 
 import SwiftUI
 import AVFoundation
@@ -64,19 +68,6 @@ struct ContentView: View {
           Spacer()
           HStack {
             Spacer()
-              //Remove recording capabilities
-              /*Button {
-                if !isRecording {
-                  cameraView.startRecording()
-                } else {
-                  cameraView.stopRecording()
-                }
-                isRecording.toggle()
-              } label: {
-                Image(systemName: "record.circle")
-                  .font(.system(size: 60))
-                  .foregroundColor(isRecording ? Color.red : Color.white)
-              }*/
               VStack{
                   Button("Instructions") {
                       popup_cameracheck_showing = true
@@ -126,9 +117,6 @@ struct ContentView: View {
             .onAppear {
             print("Here")
                 UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation") // Forcing the rotation to portrait
-            /*AppDelegate.orientationLock = .portrait // And making sure it stays that way
-            }.onDisappear {
-            AppDelegate.orientationLock = .all */
         }
         
     }

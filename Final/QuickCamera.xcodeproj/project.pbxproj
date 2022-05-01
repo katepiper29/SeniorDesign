@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040AC41C27FFC087003FF1A8 /* PopUpCheckCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AC41B27FFC087003FF1A8 /* PopUpCheckCamera.swift */; };
-		040AC42027FFD051003FF1A8 /* Avatar.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 040AC41F27FFD051003FF1A8 /* Avatar.mp4 */; };
 		04466EDE27F8F4D500152379 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EDD27F8F4D500152379 /* Avatar.swift */; };
 		04466EE027F8F50700152379 /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EDF27F8F50700152379 /* VideoPlayerController.swift */; };
 		04466EE227F8F52B00152379 /* Finalpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04466EE127F8F52B00152379 /* Finalpage.swift */; };
@@ -16,6 +15,7 @@
 		04BC2C8C27FA208900F767B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC2C8B27FA208900F767B9 /* SceneDelegate.swift */; };
 		04BC2C9C27FB29F400F767B9 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC2C9B27FB29F400F767B9 /* PopUp.swift */; };
 		18693B5827F7EE5D0075CA8F /* Page3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18693B5627F7ED960075CA8F /* Page3.swift */; };
+		189E7D3F281F25690084B24C /* Avatar.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189E7D3E281F25690084B24C /* Avatar.mp4 */; };
 		18CC255827F7F53900F16B5D /* Page4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC255727F7F53900F16B5D /* Page4.swift */; };
 		18CC255A27F7F57000F16B5D /* ParentInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC255927F7F57000F16B5D /* ParentInstructions.swift */; };
 		D339619425CE17E500A5B699 /* QuickCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339619325CE17E500A5B699 /* QuickCameraApp.swift */; };
@@ -28,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		040AC41B27FFC087003FF1A8 /* PopUpCheckCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCheckCamera.swift; sourceTree = "<group>"; };
-		040AC41F27FFD051003FF1A8 /* Avatar.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Avatar.mp4; path = ../../../Avatar.mp4; sourceTree = "<group>"; };
 		04466EDD27F8F4D500152379 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		04466EDF27F8F50700152379 /* VideoPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		04466EE127F8F52B00152379 /* Finalpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finalpage.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		04BC2C8B27FA208900F767B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04BC2C9B27FB29F400F767B9 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		18693B5627F7ED960075CA8F /* Page3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3.swift; sourceTree = "<group>"; };
+		189E7D3E281F25690084B24C /* Avatar.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Avatar.mp4; path = ../../../Avatar.mp4; sourceTree = "<group>"; };
 		18CC255727F7F53900F16B5D /* Page4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4.swift; sourceTree = "<group>"; };
 		18CC255927F7F57000F16B5D /* ParentInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInstructions.swift; sourceTree = "<group>"; };
 		D339619025CE17E500A5B699 /* QuickCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,10 +89,10 @@
 				D339619525CE17E500A5B699 /* ContentView.swift */,
 				04BC2C9B27FB29F400F767B9 /* PopUp.swift */,
 				04466EDD27F8F4D500152379 /* Avatar.swift */,
-				040AC41F27FFD051003FF1A8 /* Avatar.mp4 */,
 				04466EDF27F8F50700152379 /* VideoPlayerController.swift */,
 				04466EE127F8F52B00152379 /* Finalpage.swift */,
 				18CC255927F7F57000F16B5D /* ParentInstructions.swift */,
+				189E7D3E281F25690084B24C /* Avatar.mp4 */,
 				D339619725CE17E800A5B699 /* Assets.xcassets */,
 				D339619C25CE17E800A5B699 /* Info.plist */,
 				D339619925CE17E800A5B699 /* Preview Content */,
@@ -165,7 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040AC42027FFD051003FF1A8 /* Avatar.mp4 in Resources */,
+				189E7D3F281F25690084B24C /* Avatar.mp4 in Resources */,
 				D339619B25CE17E800A5B699 /* Preview Assets.xcassets in Resources */,
 				D339619825CE17E800A5B699 /* Assets.xcassets in Resources */,
 			);

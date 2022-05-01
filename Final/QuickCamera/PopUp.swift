@@ -3,7 +3,7 @@
 //  QuickCamera
 //
 //  Created by Kate Piper on 4/4/22.
-//
+//  This pop up gives instructions for the avatar test
 
 import SwiftUI
 
@@ -13,7 +13,6 @@ struct PopUp: View {
         ZStack{
             Color.cyan
             VStack{
-               // Text("Parents:\n Please make sure that the volume is turned up and then start the recording and then play the video. When the video ends, please stop the recording and then click 'Finish'.")
                 Text("Parents Please: \n -Make sure the volume is turned up\n -Start the test\n\n Once the video is done please:\n -Stop the test\n -Proceed to the next page\n Thanks!")
                     .padding(20)
                     .multilineTextAlignment(.center)

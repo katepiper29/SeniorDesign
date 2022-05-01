@@ -3,7 +3,7 @@
 //  QuickCamera
 //
 //  Created by Rachel Cutlan on 4/2/22.
-//
+//  This file controls the video player
 
 import Foundation
 import SwiftUI

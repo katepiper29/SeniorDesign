@@ -3,7 +3,7 @@
 //  QuickCamera
 //
 //  Created by Rachel Cutlan on 4/2/22.
-//
+//  This page congratulates the child on completion and has a link to Box
 
 import SwiftUI
 
@@ -23,13 +23,6 @@ struct Finalpage: View {
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.25)
                     .padding()
-                
-                    //original
-                /*
-                    .fontWeight(.heavy)
-                    .font(.system(size: 80))
-                    .padding()
-                 */
                 Spacer()
                 Spacer()
                 Text("Thank you so much for your participation!")
@@ -41,12 +34,6 @@ struct Finalpage: View {
                     .minimumScaleFactor(0.01)
                     .padding()
                 
-                //original
-                /*
-                    .fontWeight(.bold)
-                    .font(.system(size: 50))
-                    .multilineTextAlignment(.center) */
-                
                 Text("Please upload your video.")
                    
                     .font(.system(size: 50))
@@ -54,11 +41,7 @@ struct Finalpage: View {
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.01)
-                
-                    /*.font(.system(size: 50))
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center) */
-                
+
                 Spacer()
                 Spacer()
                 HStack{
